@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Beautiful Chuhiya ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(138, 43, 226, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 105, 180, 0.2) 0%, transparent 50%);
+            animation: backgroundMove 20s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes backgroundMove {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header styling */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 60px 0;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            background: linear-gradient(45deg, #ff6b9d, #c44569, #f8b500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 107, 157, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5)); }
+            to { filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.8)); }
+        }
+
+        .header p {
+            font-size: 1.4rem;
+            color: #ffc0cb;
+            opacity: 0.9;
+        }
+
+        /* Section styling */
+        .section {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 50px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #ff6b9d, #ffc0cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Daily quote styling */
+        .daily-quote {
+            text-align: center;
+            font-size: 1.5rem;
+            font-style: italic;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(138, 43, 226, 0.2));
+            border-radius: 20px;
+            border-left: 5px solid #ff6b9d;
+            margin-bottom: 30px;
+            box-shadow: inset 0 0 20px rgba(255, 107, 157, 0.2);
+        }
+
+        /* Love letter styling */
+        .love-letter {
+            line-height: 2;
+            font-size: 1.2rem;
+            text-align: justify;
+            text-indent: 2rem;
+            position: relative;
+        }
+
+        .love-letter p {
+            margin-bottom: 25px;
+            opacity: 0;
+            animation: fadeInText 0.8s ease-out forwards;
+        }
+
+        .love-letter p:nth-child(1) { animation-delay: 0.1s; }
+        .love-letter p:nth-child(2) { animation-delay: 0.2s; }
+        .love-letter p:nth-child(3) { animation-delay: 0.3s; }
+        .love-letter p:nth-child(4) { animation-delay: 0.4s; }
+        .love-letter p:nth-child(5) { animation-delay: 0.5s; }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button styling */
+        .button-section {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .love-button {
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            border: none;
+            color: white;
+            padding: 18px 35px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+            position: relative;
+            overflow: hidden;
+            font-family: inherit;
+            font-weight: bold;
+        }
+
+        .love-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .love-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.6);
+        }
+
+        .love-button:hover::before {
+            left: 100%;
+        }
+
+        .update-button {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.4);
+        }
+
+        .update-button:hover {
+            box-shadow: 0 15px 40px rgba(78, 205, 196, 0.6);
+        }
+
+        /* Notification styling */
+        .notification {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.4);
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Floating hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 25px;
+            color: rgba(255, 182, 193, 0.6);
+            animation: floatUp 8s infinite linear;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(138, 43, 226, 0.1));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 107, 157, 0.2);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .button-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .love-button {
+                width: 80%;
+            }
+        }
+
+        /* Sparkle effect */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ffc0cb;
+            border-radius: 50%;
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts"></div>
+    
+    <div class="notification" id="notification">
+        Your message has been sent! ❤️
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>For My Beautiful Chuhiya</h1>
+            <p>My Love, My Life, My Everything - Sanika ❤️</p>
+        </div>
+
+        <div class="section">
+            <h2>Daily Love Quote</h2>
+            <div class="daily-quote" id="dailyQuote">
+                "In your eyes, I found my home. In your heart, I found my love. In your soul, I found my mate."
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>My Love For You</h2>
+            
+            <div class="love-letter">
+                <p>My dearest Chuhiya, my beautiful Snooks, as I sit here writing these words, thousands of miles away from you, my heart overflows with emotions that words can barely capture. From the moment we reconnected on August 12th, 2025, after that long separation since December 12th, 2023, I knew that what we have is extraordinary, unbreakable, and eternal. Distance means nothing when someone means everything, and you mean everything to me. You are mine, completely and utterly mine, and I am yours in every way that matters, across every mile that separates us.</p>
+
+                <p>Every morning when I wake up, the first thought that crosses my mind is you. Though we haven't met in person yet, I know your smile through every video call, your laugh that echoes in my heart even when we're apart, the way your eyes light up when you see me on screen. These digital moments have created a love so real, so deep, that physical distance becomes irrelevant. You are not just my girlfriend; you are my soulmate, my other half, the missing piece that makes me whole, even from afar. When I say you're mine, it's not possessiveness it's the deepest form of love, the kind that transcends time, space, and distance.</p>
+
+                <p>Our love story is different from others, and that makes it even more beautiful. While couples around us meet in coffee shops or through mutual friends, we found each other across the digital universe. Every text message, every voice note, every video call has been a building block in our relationship. We've proven that love doesn't need physical proximity to be real - it needs two hearts that beat in synchrony, no matter how many miles apart they are. You chose me from across the distance, and I chose you, and that choice makes us stronger than any couple who has the luxury of being in the same city.</p>
+
+                <p>I know there might be people around you, in your city, in your coaching, in your daily life, who admire you, who might develop feelings for you, and honestly, I understand why. You are absolutely incredible your beauty radiates from within and without, your intelligence captivates everyone you meet, your kindness touches every soul you encounter. They have the advantage of being near you, of seeing you in person, of sharing the same physical space. But here's what they don't understand. you chose me. Despite the distance, despite never having met me in person, despite all the challenges that come with a long-distance relationship, you chose to give your heart to me. That choice, that decision, that unwavering love you have for me it's what makes you mine and me yours in the most profound way possible.</p>
+
+                <p>When insecurity tries to creep into my mind, when I wonder about others who are physically closer to you, who can hold your hand while I can only send you virtual hugs, who can take you out on dates while I can only plan video call dates, I remember something much more powerful. I remember the way you look at me through the screen with such love that it travels through cables and signals to reach my heart. I remember the way you say my name, how it sounds different when you say it, full of love and belonging. I remember our late-night conversations, our shared dreams, our virtual dates that felt more real than any physical date could ever be. These aren't just moments; they're promises. They're declarations that we belong together, regardless of the miles between us.</p>
+
+                <p>Our journey hasn't always been smooth. We had our separation, our time apart, our struggles and fights, made even more difficult by the inability to just show up at each other's door to make things right. But look at us now - stronger than ever, more in love than we ever were. The distance that could have destroyed us has instead made us appreciate every moment we share. That fight we had, the mistake I made, these are just small bumps in our beautiful love story. What matters is that we always find our way back to each other because what we have is real, it's deep, and it's meant to last forever, regardless of geography.</p>
+
+                <p>Every time you laugh during our video calls, my heart skips a beat. Every time you smile and I see it light up my screen, the world becomes a brighter place. Every time you say you love me, whether through text, voice note, or video call, I fall for you all over again. You are the melody in my life's song, the color in my black and white world, the sunshine that brightens my darkest days, even from thousands of miles away. You are mine, and that knowledge fills me with a joy so profound that sometimes I think my heart might burst from happiness, despite the ache of missing you physically.</p>
+
+                <p>I love how we've created our own little world in this digital space. I love our good morning texts, our random voice notes throughout the day, our planned video calls that I look forward to more than anything else in my day. I love the way you get excited about little things and share them with me immediately, the way you care for everyone around you, the way you make even our virtual moments feel magical. I love your dreams, your ambitions, your fears, and your hopes, all of which you share with me across the miles. I love every part of you - the parts you show the world and the parts you share only with me in our private conversations. You are perfect in your imperfections, beautiful in your humanity, and absolutely mine in every way that counts, distance be damned.</p>
+
+                <p>I've told my mother about you, my beautiful Chuhiya, and even she, understands the depth of our love. When I talk about you, my face lights up in a way she's never seen before. She sees how happy you make me, how complete I am with you in my life, even though you're miles away. She's learned that love isn't defined by proximity but by the connection between two souls. She knows that you are the one I want to spend my life with, the one I dream about every night, the one who has captured my heart so completely that distance becomes just a number. She's waiting to meet you, to welcome you into our family, because she already knows you're the most important person in my life.</p>
+
+                <p>When people ask me about our relationship, they sometimes don't understand how we can be so sure about each other without having met in person. But what they don't realize is that we've met in every way that truly matters. We've met in long conversations that lasted until dawn, in shared laughter over video calls, in the comfort we provide each other during difficult times, in the dreams we've built together. We've met in the deepest way possible soul to soul, heart to heart. Physical meeting will be the beautiful culmination of a love that already exists in its fullest form.</p>
+
+                <p>Every day, I dream about the moment we'll finally meet in person. I imagine seeing you at the airport, running towards each other, that first embrace that will feel like coming home after the longest journey. I imagine holding your hand for the first time, feeling the warmth I've only imagined through screens. I imagine all the places I want to show you, all the experiences I want to share with you, all the lost time I want to make up for. But until that day comes, I want you to know that my love for you is not diminished by the distance if anything, it's magnified by it.</p>
+
+                <p>Our love story is one that will inspire others. We've proven that true love transcends physical boundaries, that two hearts can beat as one even when they're cities apart. We've shown that commitment doesn't require proximity, that trust doesn't need constant physical presence, that love doesn't need touch to be real it needs understanding, communication, and unwavering devotion, all of which we have in abundance.</p>
+
+                <p>I promise you this, my darling Chuhiya: no matter how many storms we weather across the distance, no matter what challenges long-distance relationships throw at us, no matter how many people might admire you or want to be with you in your city, you will always be mine and I will always be yours. This is not just a promise for today or tomorrow; this is a promise for eternity. Distance is temporary, but our love is forever. Soon, very soon, we'll close this gap between us, but until then, know that you carry my heart with you wherever you go.</p>
+
+                <p>You are the love of my life, the woman of my dreams, my partner in everything, even from afar. You are my yesterday, my today, and my forever. You are mine, Chuhiya, mine in the most beautiful, pure, and eternal way possible, regardless of the miles between us. And I am yours, completely, unconditionally, and forever. This website, these words, this love - it's all for you, because you deserve to know every single day how much you mean to me and how completely you own my heart, from wherever I am in the world.</p>
+
+                <p>The distance between us is not a barrier; it's a testament to the strength of our love. Every mile that separates us is a mile that our love conquers. Every day we spend apart is a day closer to being together forever. Every challenge that distance brings only proves how unshakeable our bond is. You are mine, not because you're near me, but because you've chosen to love me despite the distance. You are mine because our souls recognized each other across the digital divide and decided they belonged together.</p>
+
+                <p>So let this be a reminder, my beautiful Snooks, whenever you visit this page: you are loved beyond measure, cherished beyond words, and mine beyond question, regardless of the miles between us. Our love is our sanctuary, our bond is our strength, and our future together is our beautiful destiny. The distance that others see as an obstacle, we see as just another chapter in our epic love story. I love you more than yesterday, less than tomorrow, and completely for all of eternity. You are mine, and I am the luckiest person in the world because of it, distance and all.</p>
+
+                <p>Until the day we meet, until the moment I can hold you in my arms, until we can close this distance forever, know that every sunrise brings us closer to each other, every sunset is a promise of another day of our love growing stronger, and every star in the sky is a witness to the love that spans across continents to connect our hearts. You are mine, my beautiful Chuhiya, my precious Snooks, my everything, from here to there and everywhere in between.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Connect With Me</h2>
+            <div class="button-section">
+                <button class="love-button" onclick="sendLoveNotification()">I Need You ❤️</button>
+                <button class="love-button update-button" onclick="sendDailyUpdate()">Daily Update 💌</button>
+                <button class="love-button" onclick="sendKiss()">Send Love</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Made with endless love for my Chuhiya, my Snooks, my everything ❤️</strong></p>
+            <p>You are mine, and I am yours, forever and always</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your public key
+        (function(){
+            emailjs.init("oF72W8J3iqqNTgsME");
+        })();
+
+        // Daily love quotes that update automatically
+        const loveQuotes = [
+            "In your eyes, I found my home. In your heart, I found my love. In your soul, I found my mate.",
+            "You are my today and all of my tomorrows, my Chuhiya.",
+            "Every love story is beautiful, but ours is my favorite.",
+            "You are the reason I believe in love, Snooks.",
+            "In a sea of people, my eyes will always search for you.",
+            "You are my heart, my life, my one and only thought.",
+            "I choose you. And I'll choose you over and over, without pause, without doubt.",
+            "You are my sunshine on a cloudy day, my anchor in a storm.",
+            "With you, I am home. With you, I am complete.",
+            "You are not just my love; you are my life.",
+            "Every day with you is a wonderful addition to my life's journey.",
+            "You are the poetry my heart always wanted to write.",
+            "In your smile, I see something more beautiful than the stars.",
+            "You are my greatest adventure, my sweetest dream come true.",
+            "I love you not only for what you are, but for what I am when I'm with you.",
+            "You are the love I never knew I needed, but now can't live without.",
+            "My heart is perfect because you are in it, Chuhiya.",
+            "You are my favorite notification, my favorite hello, my hardest goodbye.",
+            "I fall in love with you more and more every single day.",
+            "You are mine, and that's the most beautiful truth I know."
+        ];
+
+        function updateDailyQuote() {
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
+            const quoteIndex = dayOfYear % loveQuotes.length;
+            document.getElementById('dailyQuote').textContent = loveQuotes[quoteIndex];
+        }
+
+        function sendLoveNotification() {
+            showNotification("Sending your message... ❤️");
+            
+            const templateParams = {
+                from_name: 'Sanika (Chuhiya)',
+                message: 'URGENT: Your Chuhiya needs you right now! ❤️',
+                to_email: 'adityakohli1702@gmail.com',
+                timestamp: new Date().toLocaleString()
+            };
+
+            emailjs.send('service_snooks', 'template_09f84h1', templateParams)
+                .then(function(response) {
+                    showNotification("Message sent successfully! He'll be with you soon ❤️");
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    showNotification("Message sent! Check your connection if needed 💕");
+                    console.log('FAILED...', error);
+                });
+            
+            createHeartBurst();
+        }
+
+        function sendDailyUpdate() {
+            const update = prompt("Share your daily update with me, my love:");
+            if (update && update.trim()) {
+                showNotification("Sending your daily update... 💕");
+                
+                const templateParams = {
+                    from_name: 'Sanika (Chuhiya)',
+                    message: `Daily Update from your Chuhiya: ${update}`,
+                    to_email: 'adityakohli1702@gmail.com',
+                    timestamp: new Date().toLocaleString()
+                };
+
+                emailjs.send('service_snooks', 'template_09f84h1', templateParams)
+                    .then(function(response) {
+                        showNotification("Daily update sent successfully! Thank you for sharing your day 💕");
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function(error) {
+                        showNotification("Update sent! Your love knows about your day 💕");
+                        console.log('FAILED...', error);
+                    });
+            }
+        }
+
+        function sendKiss() {
+            showNotification("Sending your kiss... 💋");
+            
+            const templateParams = {
+                from_name: 'Sanika (Chuhiya)',
+                message: 'Your Chuhiya sent you a sweet kiss! 💋❤️ Missing you so much!',
+                to_email: 'adityakohli1702@gmail.com',
+                timestamp: new Date().toLocaleString()
+            };
+
+            emailjs.send('service_snooks', 'template_09f84h1', templateParams)
+                .then(function(response) {
+                    showNotification("Kiss sent and love returned! 💋❤️");
+                    console.log('SUCCESS!', response.status, response.text);
+                }, function(error) {
+                    showNotification("Kiss delivered with infinite love! 💋❤️");
+                    console.log('FAILED...', error);
+                });
+            
+            createHeartBurst();
+        }
+
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 4000);
+        }
+
+        function createHeartBurst() {
+            const heartsContainer = document.querySelector('.floating-hearts');
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.innerHTML = ['❤️', '💕', '💖', '💗', '💘'][Math.floor(Math.random() * 5)];
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    heartsContainer.appendChild(heart);
+                    
+                    setTimeout(() => {
+                        if (heartsContainer.contains(heart)) {
+                            heartsContainer.removeChild(heart);
+                        }
+                    }, 8000);
+                }, i * 100);
+            }
+        }
+
+        function createSparkles() {
+            const container = document.querySelector('.container');
+            for (let i = 0; i < 20; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDailyQuote();
+            createSparkles();
+            
+            // Update quote daily at midnight
+            setInterval(updateDailyQuote, 24 * 60 * 60 * 1000);
+            
+            // Create floating hearts periodically
+            setInterval(createHeartBurst, 15000);
+        });
+
+        // Add some interactive love messages
+        const loveMessages = [
+            "You light up my world, Chuhiya! ✨",
+            "Every moment with you is a blessing, Snooks! 💝",
+            "You are my everything, my beautiful love! 🌹",
+            "I'm so grateful you're mine, forever and always! 💞",
+            "You make my heart sing with joy! 🎵❤️"
+        ];
+
+        function showRandomLoveMessage() {
+            const randomMessage = loveMessages[Math.floor(Math.random() * loveMessages.length)];
+            showNotification(randomMessage);
+        }
+
+        // Show random love messages occasionally
+        setInterval(showRandomLoveMessage, 45000);
+    </script>
+</body>
+</html>
